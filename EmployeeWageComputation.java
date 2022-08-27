@@ -15,6 +15,7 @@ public class EmployeeWageComputation {
 				checkattendanceUC1();
 				dailyemployeewageUC2();
 				AddparttimeemployeeandwageUC3();
+				solvingusingswitchcase();
 	
 		}
 	
@@ -106,6 +107,58 @@ public class EmployeeWageComputation {
 					
 				}
 			
+			    
+			    
+			    	static void solvingusingswitchcase()
+			    	{
+			    		int salary=0;
+			    		final byte isPartTime=1;
+			    		final byte isFulltime=2;
+			    		int partOrFulltime =  (int)Math.floor(Math.random()  *3);
+			    		
+			    		System.out.println("Calculating daily wage using switch case");
+//			    		System.out.println(partOrFulltime);
+			    		
+			    		
+			    		switch (partOrFulltime) {
+			    		
+			    			case isFulltime:
+			    				int empRatePerHr=20;
+			    				int empHrs=10;
+			    				salary= empRatePerHr*empHrs;
+			    				System.out.println("Employee worked Full time hence Daily employee wage is =  " + salary);
+			    				break;
+			    				
+			    			case isPartTime:
+			    				empRatePerHr=20;
+			    				empHrs=8;
+			    				salary= empRatePerHr*empHrs;
+			    				System.out.println("Employee worked Part time hence Daily employee wage is =  " + salary);
+			    				break;
+			    		    
+			    		    case 0:
+			    		    	salary=0;
+			    				System.out.println("Employee absent hence Daily employee wage is =  " + salary);
+			    				break;
+			    		        
+			    		    default:
+			    		    	System.out.println("NO EMPLOYEE DATA");
+			    		   
+			    			}
+			    	
+			    	
+			    	
+			    		
+			    		
+			    		
+			    		
+			    		
+			    		
+			    		
+			    		
+			    		
+			    		
+			    	}
 			
 			
 			
