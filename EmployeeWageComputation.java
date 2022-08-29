@@ -16,7 +16,8 @@ public class EmployeeWageComputation {
 				dailyemployeewageUC2();
 				AddparttimeemployeeandwageUC3();
 				solvingusingswitchcase();
-	
+				System.out.println("---calculating wages for a month---");
+				calculatingwagesforamonthUC5();
 		}
 	
 	
@@ -147,21 +148,61 @@ public class EmployeeWageComputation {
 			    			}
 			    	
 			    	
-			    	
-			    		
-			    		
-			    		
-			    		
-			    		
-			    		
-			    		
-			    		
-			    		
-			    		
 			    	}
 			
 			
+			    			static	void calculatingwagesforamonthUC5()
 			
+			    			{
+			    				final byte isPartTime=1;
+			    				final byte isFulltime=2;
+			    				int salary=0;
+			    				int empRatePerHr=20;
+			    				int empHrs=0;
+			    				int totalsalary=0;
+			    				
+			    				
+			    				for (int day=1;day<=20;day++)
+			    					
+			    					
+			    				{
+			    					int partOrFulltime =  (int)Math.floor(Math.random()  *3);
+			    					
+			    					switch (partOrFulltime) {
+						    		
+					    			case isFulltime:
+					    				
+					    				empHrs=10;
+					    				
+					    				break;
+					    				
+					    			case isPartTime:
+					    				
+					    				empHrs=8;
+					    				
+					    				break;
+					    		    
+					    		    case 0:
+					    		    	empHrs=0;
+					    				
+					    				break;
+					    		        
+					    		    default:
+					    		    	System.out.println("NO EMPLOYEE DATA");
+					    		    	
+					    		    	
+			    					}
+					    		    	
+					    		    	
+					    		    	salary= empHrs * empRatePerHr;
+//					    		    	System.out.println("today salary = " + salary);
+					    		    	totalsalary=totalsalary + salary;
+					    		    	System.out.println("total accumulated salary salary till now = " + totalsalary );
+					    		   
+					    			}
+			    				System.out.println("total salary for 20  days of the month = " + totalsalary );
+			    				
+			    			}
+			    			
 								
-
 }
